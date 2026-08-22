@@ -73,7 +73,7 @@ export const CoverScreen: React.FC<CoverScreenProps> = ({
           onClick={onOpen}
           variant="gold"
           size="lg"
-          className="w-full md:w-auto px-8 py-3 rounded-2xl shadow-xl hover:scale-105 transition-all text-sm font-medium tracking-wide flex items-center justify-center gap-2 mx-auto animate-pulse-subtle"
+          className="w-full md:w-auto px-8 py-3 rounded-2xl shadow-xl hover:scale-105 transition-all text-sm font-medium tracking-wide flex items-center justify-center gap-2 mx-auto"
         >
           <MailOpen className="w-4 h-4 text-maroon-950" />
           <span>Buka Undangan</span>
