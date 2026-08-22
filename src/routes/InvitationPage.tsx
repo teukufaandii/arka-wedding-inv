@@ -1,0 +1,96 @@
+import React, { useState } from 'react';
+import { weddingData } from '../data/weddingData';
+import { useGuestName } from '../hooks/useGuestName';
+import { CoverScreen } from '../components/invitation/CoverScreen';
+import { HeroCountdown } from '../components/invitation/HeroCountdown';
+import { CoupleProfile } from '../components/invitation/CoupleProfile';
+import { QuranVerseCard } from '../components/invitation/QuranVerseCard';
+import { EventDetailCards } from '../components/invitation/EventDetailCards';
+import { MonogramWreath } from '../components/common/MonogramWreath';
+import { FloralDivider } from '../components/common/FloralDivider';
+import { FloralCorner } from '../components/common/FloralCorner';
+import { Heart } from 'lucide-react';
+
+export const InvitationPage: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { guestName, isPersonalized } = useGuestName();
+
+  return (
+    <div className="min-h-screen bg-ivory-50 text-maroon-950 flex flex-col items-center justify-start overflow-x-hidden selection:bg-gold-500/30 selection:text-maroon-900">
+      {/* Introductory Fullscreen Cover Screen */}
+      <CoverScreen
+        guestName={guestName}
+        isPersonalized={isPersonalized}
+        isOpen={isOpen}
+        onOpen={() => setIsOpen(true)}
+      />
+
+      {/* Main Invitation Container */}
+      <main className="w-full max-w-3xl px-4 py-8 md:py-16 flex flex-col items-center relative">
+        {/* Background Subtle Floral Flourishes */}
+        <FloralCorner position="top-left" size={100} className="fixed top-2 left-2 opacity-25 pointer-events-none" />
+        <FloralCorner position="top-right" size={100} className="fixed top-2 right-2 opacity-25 pointer-events-none" />
+        <FloralCorner position="bottom-left" size={100} className="fixed bottom-2 left-2 opacity-25 pointer-events-none" />
+        <FloralCorner position="bottom-right" size={100} className="fixed bottom-2 right-2 opacity-25 pointer-events-none" />
+
+        {/* Hero Section */}
+        <header className="text-center w-full max-w-xl my-6 animate-fade-in-up">
+          <p className="font-serif tracking-[0.3em] text-xs md:text-sm text-gold-600 uppercase mb-3">
+            The Wedding of
+          </p>
+
+          <div className="my-4 flex justify-center">
+            <MonogramWreath monogram={weddingData.couple.monogram} size={150} />
+          </div>
+
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-maroon-900 tracking-wide mt-3 mb-2 gold-gradient-text">
+            Arka &amp; Elena
+          </h1>
+
+          <p className="text-sm md:text-base text-maroon-800/80 font-sans tracking-widest uppercase font-medium">
+            {weddingData.events.akad.dateFormatted}
+          </p>
+
+          {/* Personalized Greeting Chip */}
+          <div className="mt-6 inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gold-500/40 bg-white/80 shadow-sm backdrop-blur-sm">
+            <Heart className="w-3.5 h-3.5 text-gold-600 fill-gold-600/30" />
+            <span className="text-xs md:text-sm font-sans text-maroon-900">
+              Yth. <span className="font-semibold">{guestName}</span>
+            </span>
+          </div>
+
+          <FloralDivider className="my-6" />
+        </header>
+
+        {/* Live Countdown Section */}
+        <HeroCountdown events={weddingData.events} />
+
+        {/* Sacred Verse Card (Q.S. Ar-Rum: 21) */}
+        <QuranVerseCard verse={weddingData.verse} />
+
+        {/* Couple Profile Section */}
+        <CoupleProfile couple={weddingData.couple} />
+
+        {/* Event Details Section (Akad & Resepsi with Maps) */}
+        <EventDetailCards events={weddingData.events} />
+
+        {/* Closing & Prayer Section */}
+        <footer className="my-16 text-center w-full max-w-xl px-4">
+          <FloralDivider className="my-6" />
+          <p className="font-sans text-xs md:text-sm text-maroon-900/80 leading-relaxed mb-4">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
+          </p>
+          <p className="font-serif text-sm font-semibold text-maroon-950 italic mb-6">
+            Wassalamu&apos;alaikum Warahmatullahi Wabarakatuh
+          </p>
+          <div className="font-serif text-lg font-bold text-gold-600">
+            Keluarga Besar Arka &amp; Elena
+          </div>
+          <div className="mt-8 text-[11px] text-maroon-900/40 font-sans">
+            &copy; 2026 Arka &amp; Elena Wedding • All Rights Reserved
+          </div>
+        </footer>
+      </main>
+    </div>
+  );
+};
