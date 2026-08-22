@@ -21,7 +21,7 @@ export const CoverScreen: React.FC<CoverScreenProps> = ({
   return (
     <div
       className={cn(
-        'fixed inset-0 w-full h-[100dvh] min-h-screen z-50 flex flex-col items-center justify-center p-4 md:p-6 transition-all duration-700 ease-out bg-maroon-950 maroon-gradient-bg overflow-y-auto text-center will-change-transform',
+        'fixed inset-0 w-full h-[100dvh] min-h-screen z-50 flex flex-col items-center justify-center p-4 md:p-6 transition-all duration-700 ease-out bg-maroon-950 maroon-gradient-bg overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden text-center will-change-transform',
         isOpen
           ? 'opacity-0 pointer-events-none -translate-y-full'
           : 'opacity-100 translate-y-0 touch-none overscroll-none'

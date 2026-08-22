@@ -53,19 +53,38 @@
   }
 }
 
-/* Custom Scrollbar */
+/* Elegant Minimal Overlay Scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.4) transparent;
+}
+
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
+  height: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #FCFBF7;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
+  background: rgba(212, 175, 55, 0.35);
   border-radius: 9999px;
+  transition: background-color 0.2s ease;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B38F26;
+  background: rgba(212, 175, 55, 0.7);
+}
+
+/* Hide scrollbar on mobile screens for a clean native look */
+@media (max-width: 768px) {
+  html {
+    scrollbar-width: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
 }
 
 /* Utilities for TasteSkill text shimmer & golden shadows */
