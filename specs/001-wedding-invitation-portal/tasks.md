@@ -28,14 +28,14 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T005 [P] Define core domain TypeScript interfaces and data models (PersonProfile, CoupleData, EventDetail, WeddingEvents, BankAccount, QuranVerse, CountdownTime, GuestInvitationContext) in src/types/wedding.ts
-- [ ] T006 [P] Implement centralized static wedding dataset with realistic Indonesian defaults ("Arka Pratama & Nadia Safira", Akad & Resepsi schedules, bank accounts, WhatsApp template, and static token) in src/data/weddingData.ts
-- [ ] T007 [P] Implement TasteSkill vector filigree corner flourish SVG component in src/components/common/FloralCorner.tsx
-- [ ] T008 [P] Implement TasteSkill vector gold horizontal section divider SVG component in src/components/common/FloralDivider.tsx
-- [ ] T009 [P] Implement TasteSkill vector floral framing wrapper SVG component in src/components/common/FloralFrame.tsx
-- [ ] T010 [P] Implement TasteSkill vector circular monogram wreath SVG component in src/components/common/MonogramWreath.tsx
-- [ ] T011 [P] Implement base shadcn/ui primitives (Button, Card, Badge, Sonner, Input, Label) styled with TasteSkill maroon-gold tokens in src/components/ui/
-- [ ] T012 Implement client-side query string extraction and sanitization hook (useGuestName) with "Tamu Undangan" fallback in src/hooks/useGuestName.ts
+- [X] T005 [P] Define core domain TypeScript interfaces and data models (PersonProfile, CoupleData, EventDetail, WeddingEvents, BankAccount, QuranVerse, CountdownTime, GuestInvitationContext) in src/types/wedding.ts
+- [X] T006 [P] Implement centralized static wedding dataset with realistic Indonesian defaults ("Arka Pratama & Nadia Safira", Akad & Resepsi schedules, bank accounts, WhatsApp template, and static token) in src/data/weddingData.ts
+- [X] T007 [P] Implement TasteSkill vector filigree corner flourish SVG component in src/components/common/FloralCorner.tsx
+- [X] T008 [P] Implement TasteSkill vector gold horizontal section divider SVG component in src/components/common/FloralDivider.tsx
+- [X] T009 [P] Implement TasteSkill vector floral framing wrapper SVG component in src/components/common/FloralFrame.tsx
+- [X] T010 [P] Implement TasteSkill vector circular monogram wreath SVG component in src/components/common/MonogramWreath.tsx
+- [X] T011 [P] Implement base shadcn/ui primitives (Button, Card, Badge, Sonner, Input, Label) styled with TasteSkill maroon-gold tokens in src/components/ui/
+- [X] T012 Implement client-side query string extraction and sanitization hook (useGuestName) with "Tamu Undangan" fallback in src/hooks/useGuestName.ts
 
 **Checkpoint**: Foundation ready - user story implementation can now begin.
 
