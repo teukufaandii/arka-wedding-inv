@@ -31,12 +31,15 @@ export interface WeddingEvents {
   resepsi: EventDetail;
 }
 
+export type BankAccountCategory = 'mempelai' | 'keluarga_pria' | 'keluarga_wanita';
+
 export interface BankAccount {
   id: string;
-  bankName: string; // "BCA", "Bank Mandiri", "BSI"
+  bankName: string;
   accountNumber: string;
   accountHolder: string;
-  recipientCategory: 'Mempelai Pria' | 'Mempelai Wanita';
+  recipientCategory: string;
+  category?: BankAccountCategory;
 }
 
 export interface QuranVerse {
