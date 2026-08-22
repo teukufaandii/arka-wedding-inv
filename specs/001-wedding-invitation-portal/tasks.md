@@ -92,9 +92,9 @@
 
 **Purpose**: Metadata, responsive visual audits, TasteSkill design compliance verification, and end-to-end quickstart scenario testing.
 
-- [ ] T027 [P] Configure HTML meta tags, OpenGraph social sharing preview, title ("The Wedding of Arka & Nadia"), and favicon in index.html and public/favicon.svg
-- [ ] T028 [P] Perform TasteSkill design audit verifying 100% vector ornaments, 0 portrait photographs, 4px/8px spacing, and WCAG AA contrast across 320px to 4K viewports
-- [ ] T029 Execute full end-to-end validation scenarios documented in specs/001-wedding-invitation-portal/quickstart.md
+- [X] T027 [P] Configure HTML meta tags, OpenGraph social sharing preview, title ("The Wedding of Arief & Eka"), and favicon in index.html and public/favicon.svg
+- [X] T028 [P] Perform TasteSkill design audit verifying 100% vector ornaments, 0 portrait photographs, 4px/8px spacing, and WCAG AA contrast across 320px to 4K viewports
+- [X] T029 Execute full end-to-end validation scenarios documented in specs/001-wedding-invitation-portal/quickstart.md
 
 ---
 
