@@ -21,9 +21,14 @@ export const CoverScreen: React.FC<CoverScreenProps> = ({
   return (
     <div
       className={cn(
-        'fixed inset-0 z-50 flex flex-col items-center justify-center p-4 md:p-6 transition-all duration-1000 ease-in-out maroon-gradient-bg overflow-hidden text-center',
-        isOpen ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100 translate-y-0'
+        'fixed inset-0 w-full h-[100dvh] min-h-screen z-50 flex flex-col items-center justify-center p-4 md:p-6 transition-all duration-700 ease-out bg-maroon-950 maroon-gradient-bg overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden text-center will-change-transform',
+        isOpen
+          ? 'opacity-0 pointer-events-none -translate-y-full'
+          : 'opacity-100 translate-y-0 touch-none overscroll-none'
       )}
+      style={{
+        transform: isOpen ? 'translate3d(0, -100%, 0)' : 'translate3d(0, 0, 0)',
+      }}
     >
       {/* Background Decorative Floral Corners */}
       <FloralCorner position="top-left" size={90} className="absolute top-4 left-4 opacity-70" />

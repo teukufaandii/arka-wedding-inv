@@ -20,7 +20,7 @@ export const FloralFrame: React.FC<FloralFrameProps> = ({
   return (
     <div
       className={cn(
-        'relative rounded-2xl border p-6 md:p-8 backdrop-blur-sm transition-all duration-300',
+        'relative rounded-2xl border p-6 md:p-8 bg-white/95 shadow-sm transition-all duration-300',
         borderColor,
         variant === 'screen' ? 'min-h-[85vh] flex flex-col justify-center' : '',
         variant === 'compact' ? 'p-4 md:p-6' : '',

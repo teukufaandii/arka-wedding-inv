@@ -73,7 +73,7 @@ export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({
           return (
             <div
               key={account.id}
-              className="relative rounded-3xl border border-gold-500/35 bg-white/85 p-6 shadow-sm backdrop-blur-md flex flex-col justify-between items-center text-center transition-all hover:border-gold-500/70"
+              className="relative rounded-3xl border border-gold-500/35 bg-white/95 p-6 shadow-sm flex flex-col justify-between items-center text-center transition-all hover:border-gold-500/70"
             >
               <FloralCorner
                 position="top-left"

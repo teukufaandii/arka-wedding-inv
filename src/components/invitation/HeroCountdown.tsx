@@ -33,7 +33,7 @@ export const HeroCountdown: React.FC<HeroCountdownProps> = ({ events }) => {
         {units.map((unit) => (
           <div
             key={unit.label}
-            className="flex flex-col items-center justify-center p-3 md:p-4 rounded-2xl border border-gold-500/40 bg-white/90 shadow-sm backdrop-blur-md transition-transform hover:-translate-y-0.5"
+            className="flex flex-col items-center justify-center p-3 md:p-4 rounded-2xl border border-gold-500/40 bg-white/95 shadow-sm transition-transform hover:-translate-y-0.5"
           >
             <span className="font-serif text-2xl md:text-4xl font-bold text-maroon-900 tracking-tight">
               {String(unit.value).padStart(2, '0')}

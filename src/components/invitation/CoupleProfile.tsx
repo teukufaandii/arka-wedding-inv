@@ -21,7 +21,7 @@ export const CoupleProfile: React.FC<CoupleProfileProps> = ({ couple }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 mt-8 items-stretch">
         {/* Groom Card */}
-        <div className="relative rounded-3xl border border-gold-500/30 bg-white/80 p-6 md:p-8 shadow-sm backdrop-blur-md flex flex-col justify-between items-center transition-all hover:border-gold-500/60">
+        <div className="relative rounded-3xl border border-gold-500/30 bg-white/95 p-6 md:p-8 shadow-sm flex flex-col justify-between items-center transition-all hover:border-gold-500/60">
           <FloralCorner position="top-left" size={40} className="absolute top-2 left-2 opacity-60" />
           <FloralCorner position="bottom-right" size={40} className="absolute bottom-2 right-2 opacity-60" />
 
@@ -43,7 +43,7 @@ export const CoupleProfile: React.FC<CoupleProfileProps> = ({ couple }) => {
         </div>
 
         {/* Bride Card */}
-        <div className="relative rounded-3xl border border-gold-500/30 bg-white/80 p-6 md:p-8 shadow-sm backdrop-blur-md flex flex-col justify-between items-center transition-all hover:border-gold-500/60">
+        <div className="relative rounded-3xl border border-gold-500/30 bg-white/95 p-6 md:p-8 shadow-sm flex flex-col justify-between items-center transition-all hover:border-gold-500/60">
           <FloralCorner position="top-right" size={40} className="absolute top-2 right-2 opacity-60" />
           <FloralCorner position="bottom-left" size={40} className="absolute bottom-2 left-2 opacity-60" />
 

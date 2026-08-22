@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { weddingData } from '../data/weddingData';
 import { useGuestName } from '../hooks/useGuestName';
 import { CoverScreen } from '../components/invitation/CoverScreen';
@@ -16,23 +16,47 @@ export const InvitationPage: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { guestName, isPersonalized } = useGuestName();
 
+  // Strict scroll lock while CoverScreen is active
+  useEffect(() => {
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+      document.documentElement.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  const handleOpenInvitation = () => {
+    setIsOpen(true);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
     <div className="min-h-screen bg-ivory-50 text-maroon-950 flex flex-col items-center justify-start overflow-x-hidden selection:bg-gold-500/30 selection:text-maroon-900">
-      {/* Introductory Fullscreen Cover Screen */}
+      {/* Introductory Fullscreen Cover Screen with Strict Scroll Lock */}
       <CoverScreen
         guestName={guestName}
         isPersonalized={isPersonalized}
         isOpen={isOpen}
-        onOpen={() => setIsOpen(true)}
+        onOpen={handleOpenInvitation}
       />
 
       {/* Main Invitation Container */}
-      <main className="w-full max-w-3xl px-4 py-8 md:py-16 flex flex-col items-center relative">
-        {/* Background Subtle Floral Flourishes */}
-        <FloralCorner position="top-left" size={100} className="fixed top-2 left-2 opacity-25 pointer-events-none" />
-        <FloralCorner position="top-right" size={100} className="fixed top-2 right-2 opacity-25 pointer-events-none" />
-        <FloralCorner position="bottom-left" size={100} className="fixed bottom-2 left-2 opacity-25 pointer-events-none" />
-        <FloralCorner position="bottom-right" size={100} className="fixed bottom-2 right-2 opacity-25 pointer-events-none" />
+      <main className="w-full max-w-3xl px-4 py-8 md:py-16 flex flex-col items-center relative overflow-hidden">
+        {/* Background Subtle Floral Flourishes - Absolute for high 60fps GPU performance */}
+        <FloralCorner position="top-left" size={90} className="absolute top-2 left-2 opacity-20 pointer-events-none" />
+        <FloralCorner position="top-right" size={90} className="absolute top-2 right-2 opacity-20 pointer-events-none" />
+        <FloralCorner position="bottom-left" size={90} className="absolute bottom-2 left-2 opacity-20 pointer-events-none" />
+        <FloralCorner position="bottom-right" size={90} className="absolute bottom-2 right-2 opacity-20 pointer-events-none" />
 
         {/* Hero Section */}
         <header className="text-center w-full max-w-xl my-6 animate-fade-in-up">
