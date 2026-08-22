@@ -79,10 +79,10 @@
 
 **Independent Test**: Navigate to `/share` and `/share?token=wrong` (verifying immediate redirect to `/`); navigate to `/share?token=arka-family-2026` (verifying access granted); input guest name (e.g. "Keluarga dr. Hendra"), generate personalized link, and verify WhatsApp deep-link generation.
 
-- [ ] T023 [P] [US3] Implement client-side static token route guard (ProtectedRoute) verifying ?token=STATIC_TOKEN and bouncing unauthorized visits to / with Navigate replace in src/routes/ProtectedRoute.tsx
-- [ ] T024 [US3] Implement WhatsApp share generator component (WhatsAppSharePortal) featuring recipient name input, dynamic link builder (?to=...), editable formal Islamic greeting preview, and 1-click WhatsApp deep link in src/components/share/WhatsAppSharePortal.tsx
-- [ ] T025 [US3] Implement dedicated share page view (SharePage) wrapped with TasteSkill maroon-gold styling in src/routes/SharePage.tsx
-- [ ] T026 [US3] Configure client application router with / and /share routes and Toast provider in src/App.tsx and src/main.tsx
+- [X] T023 [P] [US3] Implement client-side static token route guard (ProtectedRoute) verifying ?token=STATIC_TOKEN and bouncing unauthorized visits to / with Navigate replace in src/components/auth/ProtectedRoute.tsx
+- [X] T024 [US3] Implement WhatsApp share generator component (WhatsAppSharePortal) featuring recipient name input, dynamic link builder (?to=...), editable formal Islamic greeting preview, and 1-click WhatsApp deep link in src/components/share/WhatsAppSharePortal.tsx
+- [X] T025 [US3] Implement dedicated share page view (SharePage) wrapped with TasteSkill maroon-gold styling in src/routes/SharePage.tsx
+- [X] T026 [US3] Configure client application router with / and /share routes and Toast provider in src/App.tsx and src/main.tsx
 
 **Checkpoint**: All three user stories are functional and testable end-to-end.
 

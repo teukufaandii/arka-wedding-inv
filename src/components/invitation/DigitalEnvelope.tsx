@@ -11,34 +11,17 @@ interface DigitalEnvelopeProps {
 }
 
 /**
- * Robust zero-dependency clipboard copy helper with legacy fallback
+ * Modern Asynchronous Clipboard API copy helper via navigator.clipboard
  */
 async function copyToClipboard(text: string): Promise<boolean> {
-  if (navigator.clipboard && window.isSecureContext) {
-    try {
-      await navigator.clipboard.writeText(text);
-      return true;
-    } catch {
-      // Fallback below
-    }
+  if (!navigator?.clipboard?.writeText) {
+    return false;
   }
-
-  // Fallback for non-secure contexts / embedded webviews
-  const textArea = document.createElement('textarea');
-  textArea.value = text;
-  textArea.style.position = 'fixed';
-  textArea.style.left = '-999999px';
-  textArea.style.top = '-999999px';
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-
   try {
-    const successful = document.execCommand('copy');
-    textArea.remove();
-    return successful;
-  } catch {
-    textArea.remove();
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (err) {
+    console.error('Failed to copy to clipboard via Asynchronous Clipboard API:', err);
     return false;
   }
 }
