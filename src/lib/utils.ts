@@ -1,0 +1,16 @@
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+/**
+ * Merges Tailwind classes safely with clsx and tailwind-merge
+ */
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+/**
+ * Format currency or numbers for Indonesian locale
+ */
+export function formatNumber(num: number): string {
+  return new Intl.NumberFormat('id-ID').format(num)
+}

@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%; /* #FCFBF7 ivory-50 */
+    --foreground: 345 80% 10%; /* #2E050E maroon-950 */
+
+    --card: 40 33% 98%; /* #FCFBF7 */
+    --card-foreground: 345 80% 10%;
+
+    --popover: 40 33% 98%;
+    --popover-foreground: 345 80% 10%;
+
+    --primary: 347 73% 24%; /* #6A1024 maroon-800 */
+    --primary-foreground: 45 60% 90%; /* #FAF0D1 gold-200 */
+
+    --secondary: 45 64% 52%; /* #D4AF37 gold-500 */
+    --secondary-foreground: 347 80% 16%; /* #4A0917 maroon-900 */
+
+    --muted: 38 25% 94%; /* #FAF6F0 ivory-100 */
+    --muted-foreground: 345 40% 35%;
+
+    --accent: 45 80% 81%; /* #F3E5AB gold-300 */
+    --accent-foreground: 347 80% 16%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 45 50% 75%; /* subtle gold border */
+    --input: 45 50% 80%;
+    --ring: 45 64% 52%; /* #D4AF37 */
+
+    --radius: 0.875rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FCFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B38F26;
+}
+
+/* Utilities for TasteSkill text shimmer & golden shadows */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #B38F26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #FAF0D1 0%, #D4AF37 50%, #B38F26 100%);
+}
+
+.maroon-gradient-bg {
+  background: linear-gradient(180deg, #4A0917 0%, #6A1024 60%, #4A0917 100%);
+}
+
+.box-gold-glow {
+  box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.25);
+}
+
+.box-maroon-card {
+  box-shadow: 0 10px 30px -5px rgba(74, 9, 23, 0.15);
+}
