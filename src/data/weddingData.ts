@@ -66,7 +66,7 @@ export const weddingData: WeddingConfig = {
     {
       id: 'bank-bsi-keluarga-pria',
       bankName: 'Bank Syariah Indonesia (BSI)',
-      accountNumber: '7123456789',
+      accountNumber: '7004144605',
       accountHolder: 'T Fadillah Oesman',
       recipientCategory: 'Keluarga Mempelai Pria',
       category: 'keluarga_pria',
