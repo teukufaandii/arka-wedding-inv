@@ -65,9 +65,9 @@
 
 **Independent Test**: Click "Buka Google Maps" on Akad/Resepsi cards to verify Google Maps launches with correct destination query; click "Salin Nomor Rekening" on bank cards to verify clipboard copy and 2.5s "Tersalin!" visual feedback.
 
-- [ ] T020 [P] [US2] Integrate Google Maps deep-link navigation action buttons (https://www.google.com/maps/dir/?api=1&destination=...) with encoded venue queries into src/components/invitation/EventDetailCards.tsx
-- [ ] T021 [US2] Implement digital envelope & gift giving component (DigitalEnvelope) with BCA & Mandiri accounts, zero-dependency navigator.clipboard write with document.execCommand fallback, and 2.5s button state confirmation in src/components/invitation/DigitalEnvelope.tsx
-- [ ] T022 [US2] Integrate DigitalEnvelope component and Sonner toast notifications into src/routes/InvitationPage.tsx
+- [X] T020 [P] [US2] Integrate Google Maps deep-link navigation action buttons (https://www.google.com/maps/dir/?api=1&destination=...) with encoded venue queries into src/components/invitation/EventDetailCards.tsx
+- [X] T021 [US2] Implement digital envelope & gift giving component (DigitalEnvelope) with BCA & Mandiri accounts, zero-dependency navigator.clipboard write with document.execCommand fallback, and 2.5s button state confirmation in src/components/invitation/DigitalEnvelope.tsx
+- [X] T022 [US2] Integrate DigitalEnvelope component and Sonner toast notifications into src/routes/InvitationPage.tsx
 
 **Checkpoint**: User Stories 1 AND 2 are complete, integrated, and independently testable.
 

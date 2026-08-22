@@ -6,6 +6,7 @@ import { HeroCountdown } from '../components/invitation/HeroCountdown';
 import { CoupleProfile } from '../components/invitation/CoupleProfile';
 import { QuranVerseCard } from '../components/invitation/QuranVerseCard';
 import { EventDetailCards } from '../components/invitation/EventDetailCards';
+import { DigitalEnvelope } from '../components/invitation/DigitalEnvelope';
 import { MonogramWreath } from '../components/common/MonogramWreath';
 import { FloralDivider } from '../components/common/FloralDivider';
 import { FloralCorner } from '../components/common/FloralCorner';
@@ -73,6 +74,9 @@ export const InvitationPage: React.FC = () => {
 
         {/* Event Details Section (Akad & Resepsi with Maps) */}
         <EventDetailCards events={weddingData.events} />
+
+        {/* Digital Gift Giving Section (BCA & Mandiri) */}
+        <DigitalEnvelope bankAccounts={weddingData.bankAccounts} />
 
         {/* Closing & Prayer Section */}
         <footer className="my-16 text-center w-full max-w-xl px-4">
