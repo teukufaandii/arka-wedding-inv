@@ -1,15 +1,17 @@
-import React from 'react';
-import { WeddingEvents } from '../../types/wedding';
-import { Button } from '../ui/button';
-import { FloralDivider } from '../common/FloralDivider';
-import { FloralCorner } from '../common/FloralCorner';
-import { Calendar, Clock, MapPin, Navigation } from 'lucide-react';
+import React from "react";
+import { WeddingEvents } from "../../types/wedding";
+import { Button } from "../ui/button";
+import { FloralDivider } from "../common/FloralDivider";
+import { FloralCorner } from "../common/FloralCorner";
+import { Calendar, Clock, MapPin, Navigation } from "lucide-react";
 
 interface EventDetailCardsProps {
   events: WeddingEvents;
 }
 
-export const EventDetailCards: React.FC<EventDetailCardsProps> = ({ events }) => {
+export const EventDetailCards: React.FC<EventDetailCardsProps> = ({
+  events,
+}) => {
   const eventList = [events.akad, events.resepsi];
 
   return (
@@ -23,14 +25,21 @@ export const EventDetailCards: React.FC<EventDetailCardsProps> = ({ events }) =>
       <FloralDivider className="my-4" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-        {eventList.map((evt, idx) => (
+        {eventList.map((evt) => (
           <div
             key={evt.id}
             className="relative rounded-3xl border border-gold-500/35 bg-white/85 p-6 md:p-8 shadow-sm backdrop-blur-md flex flex-col justify-between items-center text-center transition-all hover:border-gold-500/70"
           >
-            <FloralCorner position={idx === 0 ? 'top-left' : 'top-right'} size={40} className="absolute top-2 left-2 opacity-50" />
-            <FloralCorner position={idx === 0 ? 'bottom-right' : 'bottom-left'} size={40} className="absolute bottom-2 right-2 opacity-50" />
-
+            <FloralCorner
+              position="top-left"
+              size={40}
+              className="absolute top-2 left-2 opacity-60"
+            />
+            <FloralCorner
+              position="bottom-right"
+              size={40}
+              className="absolute bottom-2 right-2 opacity-60"
+            />
             <div className="w-full">
               {/* Event Badge / Tag */}
               <span className="inline-block px-3 py-1 rounded-full bg-maroon-800 text-gold-300 text-xs font-serif font-bold uppercase tracking-wider mb-4 border border-gold-500/30">

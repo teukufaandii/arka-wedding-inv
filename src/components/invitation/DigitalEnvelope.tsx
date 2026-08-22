@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { BankAccount } from '../../types/wedding';
-import { Button } from '../ui/button';
-import { FloralDivider } from '../common/FloralDivider';
-import { FloralCorner } from '../common/FloralCorner';
-import { CreditCard, Copy, Check, Gift } from 'lucide-react';
-import { toast } from 'sonner';
+import React, { useState } from "react";
+import { BankAccount } from "../../types/wedding";
+import { Button } from "../ui/button";
+import { FloralDivider } from "../common/FloralDivider";
+import { FloralCorner } from "../common/FloralCorner";
+import { CreditCard, Copy, Check, Gift } from "lucide-react";
+import { toast } from "sonner";
 
 interface DigitalEnvelopeProps {
   bankAccounts: BankAccount[];
@@ -21,12 +21,17 @@ async function copyToClipboard(text: string): Promise<boolean> {
     await navigator.clipboard.writeText(text);
     return true;
   } catch (err) {
-    console.error('Failed to copy to clipboard via Asynchronous Clipboard API:', err);
+    console.error(
+      "Failed to copy to clipboard via Asynchronous Clipboard API:",
+      err,
+    );
     return false;
   }
 }
 
-export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({ bankAccounts }) => {
+export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({
+  bankAccounts,
+}) => {
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   const handleCopy = async (account: BankAccount) => {
@@ -38,7 +43,7 @@ export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({ bankAccounts }
         setCopiedId((curr) => (curr === account.id ? null : curr));
       }, 2500);
     } else {
-      toast.error('Gagal menyalin. Silakan salin secara manual.');
+      toast.error("Gagal menyalin. Silakan salin secara manual.");
     }
   };
 
@@ -46,9 +51,7 @@ export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({ bankAccounts }
     <section className="my-12 w-full max-w-2xl mx-auto px-4 text-center">
       <div className="flex items-center justify-center gap-1.5 text-gold-600 mb-2">
         <Gift className="w-4 h-4" />
-        <p className="font-serif italic text-sm tracking-wider">
-          Tanda Kasih
-        </p>
+        <p className="font-serif italic text-sm tracking-wider">Tanda Kasih</p>
       </div>
 
       <h2 className="font-serif text-3xl md:text-4xl font-bold text-maroon-900 tracking-wide mb-3">
@@ -56,13 +59,15 @@ export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({ bankAccounts }
       </h2>
 
       <p className="font-sans text-xs md:text-sm text-maroon-900/80 leading-relaxed max-w-lg mx-auto px-2">
-        Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara digital melalui:
+        Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika
+        memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara
+        digital melalui:
       </p>
 
       <FloralDivider className="my-4" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-        {bankAccounts.map((account, idx) => {
+        {bankAccounts.map((account) => {
           const isCopied = copiedId === account.id;
 
           return (
@@ -71,14 +76,14 @@ export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({ bankAccounts }
               className="relative rounded-3xl border border-gold-500/35 bg-white/85 p-6 shadow-sm backdrop-blur-md flex flex-col justify-between items-center text-center transition-all hover:border-gold-500/70"
             >
               <FloralCorner
-                position={idx === 0 ? 'top-left' : 'top-right'}
+                position="top-left"
                 size={36}
-                className="absolute top-2 left-2 opacity-50"
+                className="absolute top-2 left-2 opacity-60"
               />
               <FloralCorner
-                position={idx === 0 ? 'bottom-right' : 'bottom-left'}
+                position="bottom-right"
                 size={36}
-                className="absolute bottom-2 right-2 opacity-50"
+                className="absolute bottom-2 right-2 opacity-60"
               />
 
               <div className="w-full">
@@ -99,7 +104,10 @@ export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({ bankAccounts }
                     {account.accountNumber}
                   </div>
                   <div className="text-xs text-maroon-800/80 font-sans mt-1">
-                    a.n. <span className="font-semibold text-maroon-950">{account.accountHolder}</span>
+                    a.n.{" "}
+                    <span className="font-semibold text-maroon-950">
+                      {account.accountHolder}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -107,12 +115,12 @@ export const DigitalEnvelope: React.FC<DigitalEnvelopeProps> = ({ bankAccounts }
               {/* Copy Button */}
               <Button
                 onClick={() => handleCopy(account)}
-                variant={isCopied ? 'secondary' : 'default'}
+                variant={isCopied ? "secondary" : "default"}
                 size="default"
                 className={`w-full rounded-xl text-xs font-semibold tracking-wide transition-all ${
                   isCopied
-                    ? 'bg-gold-500/20 text-maroon-950 border-gold-500'
-                    : 'bg-maroon-800 text-gold-300 hover:bg-maroon-700'
+                    ? "bg-gold-500/20 text-maroon-950 border-gold-500"
+                    : "bg-maroon-800 text-gold-300 hover:bg-maroon-700"
                 }`}
               >
                 {isCopied ? (
