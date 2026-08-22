@@ -10,33 +10,17 @@ import { Send, Copy, ExternalLink, Sparkles, Check, RefreshCw } from 'lucide-rea
 import { toast } from 'sonner';
 
 /**
- * Zero-dependency clipboard writer with textarea fallback
+ * Modern Asynchronous Clipboard API copy helper via navigator.clipboard
  */
 async function copyText(text: string): Promise<boolean> {
-  if (navigator.clipboard && window.isSecureContext) {
-    try {
-      await navigator.clipboard.writeText(text);
-      return true;
-    } catch {
-      // fallback
-    }
+  if (!navigator?.clipboard?.writeText) {
+    return false;
   }
-
-  const textArea = document.createElement('textarea');
-  textArea.value = text;
-  textArea.style.position = 'fixed';
-  textArea.style.left = '-999999px';
-  textArea.style.top = '-999999px';
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-
   try {
-    const success = document.execCommand('copy');
-    textArea.remove();
-    return success;
-  } catch {
-    textArea.remove();
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (err) {
+    console.error('Failed to copy to clipboard via Asynchronous Clipboard API:', err);
     return false;
   }
 }
