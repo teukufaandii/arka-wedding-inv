@@ -50,7 +50,7 @@
 - [X] T013 [US1] Implement dynamic 2-stage countdown calculation hook (useCountdown) with 1000ms drift-free tick and automatic Akad to Resepsi phase transition in src/hooks/useCountdown.ts
 - [X] T014 [P] [US1] Implement animated introductory cover screen component (CoverScreen) with dynamic guest name greeting, floral frame, and "Buka Undangan" opening trigger in src/components/invitation/CoverScreen.tsx
 - [X] T015 [P] [US1] Implement hero countdown banner component (HeroCountdown) displaying real-time Days, Hours, Minutes, Seconds with TasteSkill gold badges in src/components/invitation/HeroCountdown.tsx
-- [X] T016 [P] [US1] Implement couple profile showcase component (CoupleProfile) with Arka & Elena parent details, monogram wreath, and zero portrait photos in src/components/invitation/CoupleProfile.tsx
+- [X] T016 [P] [US1] Implement couple profile showcase component (CoupleProfile) with Arief & Eka parent details, monogram wreath, and zero portrait photos in src/components/invitation/CoupleProfile.tsx
 - [X] T017 [P] [US1] Implement sacred Quran verse component (QuranVerseCard) featuring Q.S. Ar-Rum: 21 in Arabic and Indonesian translation with floral framing in src/components/invitation/QuranVerseCard.tsx
 - [X] T018 [US1] Implement structured event schedule timeline cards (EventDetailCards) for Akad Nikah and Resepsi in src/components/invitation/EventDetailCards.tsx
 - [X] T019 [US1] Assemble primary invitation landing page (InvitationPage) with smooth staggered scroll reveals and opening transition in src/routes/InvitationPage.tsx

@@ -67,6 +67,6 @@ export const weddingData: WeddingConfig = {
   defaultGuestFallback: 'Tamu Undangan',
   staticShareToken: 'arka-family-2026',
   whatsappTemplate: (guestName: string, invitationUrl: string) => {
-    return `Bismillahirrohmanirrohim\nAssalamu'alaikum Warahmatullahi Wabarakatuh\n\nYth. *${guestName}*,\n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada pernikahan kami:\n\n*Arka Pratama & Elena Safira*\n\nBerikut tautan undangan digital Anda:\n${invitationUrl}\n\nMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\nWassalamu'alaikum Warahmatullahi Wabarakatuh\n\nKami yang berbahagia,\n*Keluarga Besar Arka & Elena*`;
+    return `Bismillahirrohmanirrohim\nAssalamu'alaikum Warahmatullahi Wabarakatuh\n\nYth. *${guestName}*,\n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada pernikahan kami:\n\n*T Arief Kurniawan & Eka*\n\nBerikut tautan undangan digital Anda:\n${invitationUrl}\n\nMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\nWassalamu'alaikum Warahmatullahi Wabarakatuh\n\nKami yang berbahagia,\n*Keluarga Besar Arief & Eka*`;
   },
 };
