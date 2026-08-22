@@ -4,7 +4,6 @@ export interface PersonProfile {
   fatherName: string;
   motherName: string;
   orderInFamily: string; 
-  instagramHandle?: string;
 }
 
 export interface CoupleData {
