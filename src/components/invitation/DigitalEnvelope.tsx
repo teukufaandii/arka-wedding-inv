@@ -79,15 +79,15 @@ const BankAccountCard: React.FC<BankAccountCardProps> = ({
 
       <div className="w-full">
         {/* Bank Header Badge */}
-        <div className="flex items-center justify-between mb-4 px-1 gap-2">
+        <div className="flex items-center justify-center mb-4 px-1 gap-2">
           <span className="font-serif font-bold text-sm text-maroon-950 flex items-center gap-1.5 truncate">
             <CreditCard className="w-4 h-4 text-gold-600 flex-shrink-0" />
             <span className="truncate">{account.bankName}</span>
           </span>
-          <span className="text-[10px] uppercase font-sans font-semibold tracking-wider px-2.5 py-0.5 rounded-full bg-gold-500/15 text-maroon-900 border border-gold-500/30 flex-shrink-0">
-            {account.recipientCategory}
-          </span>
         </div>
+        <span className="text-[10px] tracking-wider uppercase font-sans font-semibold px-2.5 py-0.5 rounded-full bg-gold-500/15 text-maroon-900 border border-gold-500/30 flex-shrink-0">
+          {account.recipientCategory}
+        </span>
 
         {/* Account Number */}
         <div className="my-4 py-3 px-4 rounded-xl bg-ivory-50 border border-gold-500/25">
