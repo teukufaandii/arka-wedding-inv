@@ -39,8 +39,19 @@ export const SharePage: React.FC = () => {
         <WhatsAppSharePortal />
       </main>
 
-      <footer className="mt-8 text-center text-xs text-maroon-900/50 font-sans">
-        &copy; 2026 {weddingData.couple.groom.shortName} &amp; {weddingData.couple.bride.shortName} Wedding • Portal Khusus Keluarga &amp; Panitia
+      <footer className="mt-8 text-center text-xs text-maroon-900/50 font-sans space-y-1">
+        <p>&copy; 2026 {weddingData.couple.groom.shortName} &amp; {weddingData.couple.bride.shortName} Wedding • Portal Khusus Keluarga &amp; Panitia</p>
+        <p className="text-[11px] text-maroon-900/40">
+          Website dibangun oleh{' '}
+          <a
+            href="https://andyys-portfolio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-gold-700 hover:text-gold-600 underline underline-offset-2 transition-colors"
+          >
+            AndyysDev
+          </a>
+        </p>
       </footer>
     </div>
   );

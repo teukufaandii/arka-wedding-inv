@@ -114,8 +114,19 @@ export const InvitationPage: React.FC = () => {
           <div className="font-serif text-lg font-bold text-gold-600">
             Keluarga Besar Arief &amp; Isni
           </div>
-          <div className="mt-8 text-[11px] text-maroon-900/40 font-sans">
-            &copy; 2026 Arief &amp; Isni Wedding • All Rights Reserved
+          <div className="mt-8 text-[11px] text-maroon-900/50 font-sans space-y-1">
+            <div>&copy; 2026 Arief &amp; Isni Wedding • All Rights Reserved</div>
+            <div>
+              Website dibangun oleh{' '}
+              <a
+                href="https://andyys-portfolio.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-gold-700 hover:text-gold-600 underline underline-offset-2 transition-colors"
+              >
+                AndyysDev
+              </a>
+            </div>
           </div>
         </footer>
       </main>
