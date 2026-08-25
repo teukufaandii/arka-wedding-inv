@@ -69,7 +69,7 @@ export const InvitationPage: React.FC = () => {
           </div>
 
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-maroon-900 tracking-wide mt-3 mb-2 gold-gradient-text">
-            Arief &amp; Eka
+            Arief &amp; Isni
           </h1>
 
           <p className="text-sm md:text-base text-maroon-800/80 font-sans tracking-widest uppercase font-medium">
@@ -112,10 +112,10 @@ export const InvitationPage: React.FC = () => {
             Wassalamu&apos;alaikum Warahmatullahi Wabarakatuh
           </p>
           <div className="font-serif text-lg font-bold text-gold-600">
-            Keluarga Besar Arief &amp; Eka
+            Keluarga Besar Arief &amp; Isni
           </div>
           <div className="mt-8 text-[11px] text-maroon-900/40 font-sans">
-            &copy; 2026 Arief &amp; Eka Wedding • All Rights Reserved
+            &copy; 2026 Arief &amp; Isni Wedding • All Rights Reserved
           </div>
         </footer>
       </main>

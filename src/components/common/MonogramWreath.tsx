@@ -9,7 +9,7 @@ interface MonogramWreathProps {
 }
 
 export const MonogramWreath: React.FC<MonogramWreathProps> = ({
-  monogram = 'A & E',
+  monogram = 'A & I',
   className,
   size = 140,
   color = '#D4AF37',

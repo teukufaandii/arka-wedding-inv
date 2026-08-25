@@ -45,12 +45,12 @@ export const CoverScreen: React.FC<CoverScreenProps> = ({
 
         {/* Monogram Wreath */}
         <div className="my-2 flex justify-center">
-          <MonogramWreath monogram="A & E" size={130} />
+          <MonogramWreath monogram="A & I" size={130} />
         </div>
 
         {/* Couple Title */}
         <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gold-400 tracking-wide mt-2 mb-1 gold-gradient-text">
-          Arief &amp; Eka
+          Arief &amp; Isni
         </h1>
 
         <p className="text-xs md:text-sm text-ivory-100/80 font-sans tracking-widest uppercase mb-4">
