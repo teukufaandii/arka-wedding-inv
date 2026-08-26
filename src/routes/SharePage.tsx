@@ -44,7 +44,7 @@ export const SharePage: React.FC = () => {
         <p className="text-[11px] text-maroon-900/40">
           Website dibangun oleh{' '}
           <a
-            href="https://andyys-portfolio.vercel.app/"
+            href="https://andyys-dev.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-gold-700 hover:text-gold-600 underline underline-offset-2 transition-colors"
