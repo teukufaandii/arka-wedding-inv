@@ -7,6 +7,7 @@ import { CoupleProfile } from '../components/invitation/CoupleProfile';
 import { QuranVerseCard } from '../components/invitation/QuranVerseCard';
 import { EventDetailCards } from '../components/invitation/EventDetailCards';
 import { DigitalEnvelope } from '../components/invitation/DigitalEnvelope';
+import { MusicPlayer } from '../components/invitation/MusicPlayer';
 import { MonogramWreath } from '../components/common/MonogramWreath';
 import { FloralDivider } from '../components/common/FloralDivider';
 import { FloralCorner } from '../components/common/FloralCorner';
@@ -130,6 +131,8 @@ export const InvitationPage: React.FC = () => {
           </div>
         </footer>
       </main>
+
+      <MusicPlayer isCoverOpen={isOpen} autoPlay={true} />
     </div>
   );
 };

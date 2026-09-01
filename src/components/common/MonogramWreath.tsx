@@ -22,7 +22,6 @@ export const MonogramWreath: React.FC<MonogramWreathProps> = ({
         viewBox="0 0 200 200"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="animate-spin-slow"
         aria-hidden="true"
       >
         {/* Outer dotted accent ring */}
