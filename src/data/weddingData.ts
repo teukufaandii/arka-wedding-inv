@@ -70,15 +70,7 @@ export const weddingData: WeddingConfig = {
       accountHolder: 'T Fadillah Oesman',
       recipientCategory: 'Keluarga Mempelai Pria',
       category: 'keluarga_pria',
-    },
-    {
-      id: 'bank-bri-keluarga-wanita',
-      bankName: 'Bank Rakyat Indonesia (BRI)',
-      accountNumber: '034101001234530',
-      accountHolder: 'Fulan',
-      recipientCategory: 'Keluarga Mempelai Wanita',
-      category: 'keluarga_wanita',
-    },
+    }
   ],
   defaultGuestFallback: 'Tamu Undangan',
   staticShareToken: import.meta.env.VITE_STATIC_SHARE_TOKEN || 'arka-wedding',
