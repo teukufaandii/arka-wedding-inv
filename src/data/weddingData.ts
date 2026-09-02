@@ -13,7 +13,7 @@ export const weddingData: WeddingConfig = {
       fullName: 'Eka Isni Warsuti',
       shortName: 'Isni',
       fatherName: 'Alm. Bpk. Joko Warsito',
-      motherName: 'Ibu Mardiana',
+      motherName: 'Ibu Marbiah',
       orderInFamily: 'Putri pertama dari',
     },
     monogram: 'A & I',
