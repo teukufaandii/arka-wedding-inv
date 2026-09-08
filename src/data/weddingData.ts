@@ -25,9 +25,9 @@ export const weddingData: WeddingConfig = {
       dateFormatted: 'Minggu, 27 September 2026',
       targetTimestamp: '2026-09-27T08:00:00+07:00',
       timeRange: '08:00 - 09:00 WIB',
-      venueName: 'Mushalla KUA Pancoran',
-      venueAddress: 'Jl. Rawajati Bar. V No.12 6, RT.6/RW.4, Rawajati, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12740',
-      mapsUrl: 'https://maps.app.goo.gl/qssZ6BiSWXSAkdQGA',
+      venueName: 'Aula Auditorium Kementerian Desa dan Pembangunan Daerah Tinggal Ps. Rebo',
+      venueAddress: 'Jl. Komp. Lapan No.70, RT.7/RW.9, Pekayon, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13710',
+      mapsUrl: 'https://maps.app.goo.gl/qzxTjZgnuva21xZX9',
     },
     resepsi: {
       id: 'resepsi',
