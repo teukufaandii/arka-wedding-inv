@@ -22,9 +22,9 @@ export const weddingData: WeddingConfig = {
     akad: {
       id: 'akad',
       title: 'Akad Nikah',
-      dateFormatted: 'Sabtu, 26 September 2026',
-      targetTimestamp: '2026-09-26T19:00:00+07:00',
-      timeRange: '19:00 - 20:00 WIB',
+      dateFormatted: 'Minggu, 27 September 2026',
+      targetTimestamp: '2026-09-27T08:00:00+07:00',
+      timeRange: '08:00 - 09:00 WIB',
       venueName: 'Mushalla KUA Pancoran',
       venueAddress: 'Jl. Rawajati Bar. V No.12 6, RT.6/RW.4, Rawajati, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12740',
       mapsUrl: 'https://maps.app.goo.gl/qssZ6BiSWXSAkdQGA',
