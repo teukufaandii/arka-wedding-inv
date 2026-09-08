@@ -34,7 +34,7 @@ export const weddingData: WeddingConfig = {
       title: 'Resepsi Pernikahan',
       dateFormatted: 'Minggu, 27 September 2026',
       targetTimestamp: '2026-09-27T11:00:00+07:00',
-      timeRange: '11:00 - 14:00 WIB',
+      timeRange: '11:00 - 15:00 WIB',
       venueName: 'Aula Auditorium Kementerian Desa dan Pembangunan Daerah Tinggal Ps. Rebo',
       venueAddress: 'Jl. Komp. Lapan No.70, RT.7/RW.9, Pekayon, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13710',
       mapsUrl: 'https://maps.app.goo.gl/qzxTjZgnuva21xZX9',
