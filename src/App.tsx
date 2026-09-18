@@ -3,10 +3,12 @@ import { InvitationPage } from './routes/InvitationPage';
 import { SharePage } from './routes/SharePage';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { Toaster } from './components/ui/sonner';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Analytics />
       <Routes>
         {/* Public Invitation Landing Page */}
         <Route path="/" element={<InvitationPage />} />
